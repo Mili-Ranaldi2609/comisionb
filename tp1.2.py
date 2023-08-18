@@ -1,5 +1,7 @@
 """Trabajo Practico 1.2"""
 
+"""Integrantes del grupo: Milagros Ranaldi, Pia Lavilla, Julian Gonzalez, Valentina Lara, Ornela Condori, Venus Galiana"""
+
 #Ejercicio 1
 
 base=float(input("Ingrese el valor de la base del rectangulo: "))
