@@ -60,3 +60,84 @@ raiz_cubica_num=numero_r**(1/3)
 raiz_cuadrada_num=numero_r**(1/2)
 
 print(f"La raiz cuadrada de {numero_r} es de {raiz_cuadrada_num} y su raiz cubica es de {raiz_cubica_num}")
+
+#Ejercicio 13
+
+num_i=input("Ingrese un numero de dos cifras, (Por ejemplo: 20): ")
+inverso=num_i[::-1]
+print(f"El numero inverso es: {inverso}")
+
+#Ejercicio 14
+
+print("Ingresaremos dos numeros y los cambiaremos de lugar: ")
+a=int(input("Numero 'A': "))
+b=int(input("Numero 'B': "))
+
+aux=a
+a=b
+b=aux
+
+print(f"Ahora 'a' vale: {a} y 'b' vale: {b}")
+
+#Ejercicio 16
+
+print("Ahora te pediremos que ingreses tu nombre y tus dos apellidos:")
+
+nombre=input( "Nombre: ")
+primer_apellido =input( "Primer apellido: ")
+segundo_apellido =input( "Segundo apellido: ")
+
+inicales= (nombre[0]+", "+primer_apellido[0]+", "+segundo_apellido[0]+".").upper()
+
+print (f"Sus iniciales son: {inicales} ")
+
+#Ejercicio 17
+
+usuario=input( "Ingrese su nombre: ")
+print(f"Ahora estas en la matrix , [{usuario}]")
+
+#Ejercicio 18
+
+cena = float(input("Precio de la comida del Restaurante: "))
+servicio=cena%6.2
+propina=cena%10
+cena+= propina + servicio 
+print(f"El costo de la cena con la propina y el servicio recibido es: ${cena}")
+
+#Ejercicio 19
+
+import datetime
+
+dia=int(input("Ingrese su dia de nacimiento: "))
+mes=int(input("Ingrese su mes de nacimiento: "))
+anio=int(input("Ingrese su año de nacimiento: "))
+
+print("Tu fecha de nacimiento en formato ddmmaaa es: ")
+print(datetime.date(anio, mes, dia).strftime('%d/%m/%Y'))
+
+#Ejercicio 20
+
+import datetime
+
+dia=int(input("Ingrese su dia de nacimiento: "))
+mes=int(input("Ingrese su mes de nacimiento: "))
+anio=int(input("Ingrese su año de nacimiento: "))
+fecha=datetime.date(anio, mes, dia).strftime('%d/%m/%Y')
+
+print(f"La fecha con formato ddmmaaa es: {fecha}")
+
+#Ejercicio 21
+
+print("Necesitamos hacer ciertos cálculos antes de emprender un viaje en moto: ")
+
+km_por_litro=int(input("¿Cuantos kilometros puede recorrer su moto con 1 litro de combustible?: "))
+km_a_recorrer=int(input("¿Cuantos kilometros van a recorrer?: "))
+capacidad_del_tanque=int(input("¿De cuantos litros es su tanque?: "))
+tanques=(km_a_recorrer/km_por_litro)/capacidad_del_tanque
+
+print(F"Necesitan {tanques} tanques de combustible. ")
+
+
+
+
+
