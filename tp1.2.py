@@ -21,6 +21,54 @@ hipotenusa=((cateto1)**2+(cateto2)**2)
 
 print(f'La hipotenusa del triangulo es: {hipotenusa}')
 
+#Ejercicio 3
+
+print("Vamos a realizar la suma, resta, division y multiplicacion de dos numeros que ingreses: ")
+
+num1=float(input("Primer numero: "))
+num2=float(input("Segundo numero: "))
+
+suma=num1+num2
+resta=num1-num2
+multi=num1*num2
+div=num1/num2
+
+print(f"Resta: {num1}-{num2}={resta}.Suma: {num1}+{num2}={suma}.Multiplicacion: {num1}*{num2}={multi}.Division: {num1}/{num2}={div}")
+
+#Ejercicio 4
+
+print("Convertiremos un valor en grados Fahrenheit a grados Celsius: ")
+
+fahre=float(input("Ingrese el valor en Fahrenheit: "))
+celsius=(fahre-32)*5/9
+
+print(f"El valor en Celsius seria: {celsius}")
+
+#Ejercicio 5
+
+    #a
+nombre=input("¿Cual es tu cancion favorita?")
+    #b
+precio=int(input("Precio: "))
+total=precio+(precio*0.1)
+    #c
+edad=int(input("Edad: "))
+print("Tu edad es ", edad)
+    #d
+edad2=int(input("Edad: "))
+edad18=bool(edad2==18)
+print("Veamos si tu edad es 18: ", edad18)
+
+#Ejercicio 6
+
+print("Vamos a sacar el promedio de 3 numeros")
+val1=float(input("Ingrese el primer numero"))
+val2=float(input("Ingrese el segundo numero: "))
+val3=float(input("Ingrese el tercer numero: "))
+
+promedio_v=(val1+val2+val3)/3
+print(f"El promedio final es: {promedio_v} ")
+
 #Ejercicio 10
 
 parcial1=float(input("Ingrese la nota del primer parcial: "))
