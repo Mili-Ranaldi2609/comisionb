@@ -33,7 +33,10 @@ resta=num1-num2
 multi=num1*num2
 div=num1/num2
 
-print(f"Resta: {num1}-{num2}={resta}.Suma: {num1}+{num2}={suma}.Multiplicacion: {num1}*{num2}={multi}.Division: {num1}/{num2}={div}")
+print(f"Resta: {num1}-{num2}={resta}.")
+print(f"Suma: {num1}+{num2}={suma}.")
+print(f"Multiplicacion: {num1}*{num2}={multi}.")
+print(f"Division: {num1}/{num2}={div}")
 
 #Ejercicio 4
 
@@ -47,7 +50,7 @@ print(f"El valor en Celsius seria: {celsius}")
 #Ejercicio 5
 
     #a
-nombre=input("¿Cual es tu cancion favorita?")
+nombre=input("¿Cual es tu cancion favorita? ")
     #b
 precio=int(input("Precio: "))
 total=precio+(precio*0.1)
@@ -62,12 +65,37 @@ print("Veamos si tu edad es 18: ", edad18)
 #Ejercicio 6
 
 print("Vamos a sacar el promedio de 3 numeros")
-val1=float(input("Ingrese el primer numero"))
+val1=float(input("Ingrese el primer numero: "))
 val2=float(input("Ingrese el segundo numero: "))
 val3=float(input("Ingrese el tercer numero: "))
 
 promedio_v=(val1+val2+val3)/3
 print(f"El promedio final es: {promedio_v} ")
+
+#Ejercicio 7
+
+minutos=int(input("Ingrese la cantidad de minutos: "))
+horas=minutos/60
+
+print(f"Los minutos convertidos en horas son: {horas}")
+
+#Ejercicio 8
+
+print("Calcularemos tu sueldo total")
+
+sueldo_base=int(input("Sueldo base: "))
+cant_ventas=int(input("Cantidad de ventas: "))
+extra=(sueldo_base*(10*cant_ventas))/100
+sueldo_total=sueldo_base+extra
+
+print(f"Tu sueldo final es de: {sueldo_total}")
+
+#Ejercicio 9
+
+print("Calculemos el monto que deberas pagar: ")
+compra=float(input("Ingrese el precio de la compra:"))
+descuento=float(compra-(100*0.15))
+print(f"Lo que debera pagar es: ${descuento}")
 
 #Ejercicio 10
 
