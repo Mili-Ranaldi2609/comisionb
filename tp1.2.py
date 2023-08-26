@@ -155,6 +155,21 @@ b=aux
 
 print(f"Ahora 'a' vale: {a} y 'b' vale: {b}")
 
+#Ejercicio 15
+print("Vamos a calcular la hora de llegada de un ciclista de la ciudad A hasta la ciudad B")
+
+from datetime import datetime, timedelta
+
+HH=int(input("Ingrese la hora de partida: "))
+MM=int(input("Ingrese los minutos: "))
+SS=int(input("Ingrese los segundos: "))
+hora_partida=datetime.strptime(F"{HH}:{MM}:{SS}",'%H:%M:%S')
+
+T=int(input("Ingrese el tiempo de viaje en segundos: "))
+tiempo_llegada=timedelta(seconds=T)
+hora_llegada=hora_partida+tiempo_llegada
+
+
 #Ejercicio 16
 
 print("Ahora te pediremos que ingreses tu nombre y tus dos apellidos:")

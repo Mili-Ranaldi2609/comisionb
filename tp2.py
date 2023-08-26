@@ -168,16 +168,16 @@ num_2=int(input("Numero 2: "))
 
 if num_1<=0 or num_2<=0:
     print("Ingreso de numeros negativos o nulos")
-    if num_2>num_1:
-        if num_2%num_1==0:
-            print(f"{num_2} es multiplo de {num_1}")
-        else:
-            print("No son multiplos")
-    elif num_1>num_2:
-        if num_1%num_2==0:
-            print(f"{num_1} es multiplo de {num_2}")
-        else:
-            print("No son multiplos")
+elif num_2>num_1:
+    if num_2%num_1==0:
+        print(f"{num_2} es multiplo de {num_1}")
+    else:
+        print("No son multiplos")
+elif num_1>num_2:
+    if num_1%num_2==0:
+        print(f"{num_1} es multiplo de {num_2}")
+else:
+        print("No son multiplos")
 
 #Ejercicio 14
 
@@ -195,29 +195,29 @@ print(f"El resultado de su ecuacion es {x}")
 #Ejercicio 15
 
 import math
+forma=input("Desea sacar el area de un triangulo o un circulo? ingrese 't' para triangulo y 'c' para circulo: ").lower()
 
-forma=input("Desea sacar el area de un triangulo o un circulo? ingrese 't' para triangulo y 'c' para circulo: ")
-forma=forma.lower()
-
-if forma=="t":
-    base_t=input("Ingrese la base del triangulo: ")
-    altura_t=input("Ingrese la altura del triangulo: ")
-    area_t=(base_t*altura_t)/2
-    print(f"El area del triangulo es {area_t}")
-elif forma=="c":
-    radio_c=input("Ingrese el radio del circulo: ")
-    area_c=(math.pi*(radio_c**2))
-    print(f"El area del circulo es {area_c}")
+if(forma=="t"):
+    base=int(input("ingrese la base del triangulo: "))
+    altura=int(input("ingrese la altura del triangulo: "))
+    area= (base*altura)/2
+    print("El area del triangulo es: ", area)
+elif(forma=="c"):
+    radio=int(input("ingrese el radio del circulo: "))
+    area=(math.pi*(radio**2))
+    print("el area del circulo es: ", area)
 else:
-    print("Error, el tipo de operacion ingresada no corresponde a lo pedido")
+    print("error, el tipo de operacion ingresada no corresponde a lo pedido")
+
+
 
 #Ejercicio 16
 print("Con esta calculadora basica operaremos segun lo que ingreses")
 
 num001=float(input("Ingrese un numero: "))
-num002=float(inout("Ingrese otro numero: "))
+num002=float(input("Ingrese otro numero: "))
 
-operacion=int(input("¿Que operacion desea realizar?: (1)Suma, (2)Multiplicacion, (3)Resta, (4)Division"))
+operacion=int(input("¿Que operacion desea realizar?: (1)Suma, (2)Multiplicacion, (3)Resta, (4)Division: "))
 
 if operacion==1:
     suma=num001+num002
@@ -235,6 +235,17 @@ else:
     print("La operacion ingresada no cerresponde a ninguna operacion de las pedidas")
 
 #Ejercicio 17
+
+dia=input("ingrese un dia de la semana: ")
+dia.lower
+if (dia=="lunes"):
+    print("inicio de semana")
+elif (dia=="viernes"):
+    print("ya casi es fin semana")
+elif (dia=="sabado" or dia=="domingo"):
+    print("fin de semana")
+else:
+    print("hoy es: ", dia)
 
 
 
