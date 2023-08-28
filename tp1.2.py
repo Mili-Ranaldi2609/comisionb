@@ -156,20 +156,22 @@ b=aux
 print(f"Ahora 'a' vale: {a} y 'b' vale: {b}")
 
 #Ejercicio 15
+
 print("Vamos a calcular la hora de llegada de un ciclista de la ciudad A hasta la ciudad B")
 
-from datetime import datetime, timedelta
+hora_p=int(input("Hora/s de partida: "))
+min_p=int(input("Minuto/s de partida: "))
+seg_p=int(input("Segundo/s de partida:"))
 
-HH=int(input("Ingrese la hora de partida: "))
-MM=int(input("Ingrese los minutos: "))
-SS=int(input("Ingrese los segundos: "))
-hora_partida=datetime.strptime(F"{HH}:{MM}:{SS}",'%H:%M:%S')
+seg_viaje=int(input("Tiempo de viaje en segundos: "))
 
-T=int(input("Ingrese el tiempo de viaje en segundos: "))
-tiempo_llegada=timedelta(seconds=T)
-hora_llegada=hora_partida+tiempo_llegada
+seg_i=hora_p*3600+min_p*60+seg_p
+seg_f=seg_p+seg_i
+hora_llegada=seg_f//3600
+min_llegada=(seg_f%3600)//60
+seg_llegada=(seg_f%3600)%60
 
-
+print(f"Hora de llegada: {hora_llegada}:{min_llegada}:{seg_llegada} ")
 #Ejercicio 16
 
 print("Ahora te pediremos que ingreses tu nombre y tus dos apellidos:")
