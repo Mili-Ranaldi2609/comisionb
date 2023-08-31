@@ -20,12 +20,12 @@ for i  in range(5):
 num=1
 digito_p=0
 digito_imp=0
-while (num>0 and num!=0):
+while int(num>0 and num!=0):
     
     num=int(input("Ingrese un numero: "))
-    if (num%2==0):
+    if int(num%2==0):
         digito_p=1+digito_p
-    elif num%2!=0:
+    elif int(num%2!=0):
         digito_imp=1+digito_imp
         
 
