@@ -158,7 +158,7 @@ for i in range(amount):
     if num<0:
         negative +=1 
 print(f"se han introducido: {negative} numeros negativos")
-
+#
 #Ejercicio 17
 
 phrase17=(input("ingrese una frase: ")).lower() 
