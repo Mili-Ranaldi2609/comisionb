@@ -75,9 +75,9 @@ print(f"El promedio final es: {promedio_v} ")
 #Ejercicio 7
 
 minutos=int(input("Ingrese la cantidad de minutos: "))
-horas=minutos/60
-
-print(f"Los minutos convertidos en horas son: {horas}")
+horas=minutos//60
+min_restantes= minutos%60
+print(f"Los minutos convertidos en horas son: {horas}:{min_restantes}")
 
 #Ejercicio 8
 
@@ -192,10 +192,10 @@ print(f"Ahora estas en la matrix , [{usuario}]")
 #Ejercicio 18
 
 cena = float(input("Precio de la comida del Restaurante: "))
-servicio=cena%6.2
-propina=cena%10
-cena+= propina + servicio 
-print(f"El costo de la cena con la propina y el servicio recibido es: ${cena}")
+servicio=cena*(6.2/100)
+propina=cena*(10/100)
+pagar= propina + servicio + cena
+print(f"El costo de la cena con la propina y el servicio recibido es: ${pagar}")
 
 #Ejercicio 19
 
@@ -210,14 +210,12 @@ print(datetime.date(anio, mes, dia).strftime('%d/%m/%Y'))
 
 #Ejercicio 20
 
-import datetime
+completo = input("ingrese su dia de nacimiento mes y año: ")
+dia=completo[:2]
+mes=completo[2:4]
+anio=completo[4:]
 
-dia=int(input("Ingrese su dia de nacimiento: "))
-mes=int(input("Ingrese su mes de nacimiento: "))
-anio=int(input("Ingrese su año de nacimiento: "))
-fecha=datetime.date(anio, mes, dia).strftime('%d/%m/%Y')
-
-print(f"La fecha con formato ddmmaaa es: {fecha}")
+print(f"{dia}/{mes}/{anio}")
 
 #Ejercicio 21
 
