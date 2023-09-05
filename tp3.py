@@ -124,6 +124,64 @@ for i in range(number,number_2+1):
     else:
         print(f"Numero impar: {i}")    
 
+#Ejercicio 14
+
+number14=int(input("Ingrese un numero: ")) 
+number_2=int(input("Ingrese otro numero: ")) 
+
+print(f"Vamos a ver si los numeros que se encuentran entre {number14} y {number_2} son pares o impares: ") 
+
+for i in range(number14,number_2+1): 
+    if i %2==0: 
+        print(f"Numero par: {i}") 
+    else: 
+        print(f"Numero impar: {i}")     
+
+#Ejercicio 15
+while True:
+    num = int(input("Escriba el numero del cual quiere conocer sus divisores: ")) 
+    if num <= 0: 
+        break      
+    for i in range(num): 
+        divider = 0       
+        if num%(i+1) == 0: 
+            divider +=1 
+            print("los divisores de ",num, "son ", i+1 ) 
+
+#Ejercicio 16
+
+amount= int(input("indique cuantos numeros va ingresar: ")) 
+negative=0
+
+for i in range(amount): 
+    num = int(input("ingrese el numero: ")) 
+    if num<0:
+        negative +=1 
+print(f"se han introducido: {negative} numeros negativos")
+
+#Ejercicio 17
+
+phrase17=(input("ingrese una frase: ")).lower() 
+vowel="aeiou"
+
+for i in vowel:
+    if i in phrase17:  
+        print(i) 
+
+#Ejercicio 18
+
+before1 = 0
+before2 = 1
+sequence = "0 1 "
+for i in range(9) :
+    new = before1 + before2
+    before1 = before2
+    before2 = new
+    num3 = str(new)
+    sequence += num3
+    sequence += " "
+print(sequence)
+
 #Ejercicio 19
 
 objetive=int(input("Ingrese la cantidad de dinero que desea ahorrar: ")) 
@@ -177,3 +235,39 @@ while (number22!=-1):
     if (number22 % 2==0): 
         addition_2+=1 
 print(f"La cantidad de numeros pares son: {addition_2}")
+
+#Ejercicio 23
+
+
+
+#Ejercicio 24
+
+print("Ingreese los montos, para calcular el total de su compra")
+total_amount = 0
+while True:
+    amount = float(input("Ingrese el monto(Ingrese un valor negativo para salir): "))
+
+    if amount < 0:
+        print("Monto inválido. Por favor, ingrese un nuevo monto.")
+        continue
+    
+    total_amount += amount
+    if total_amount > 1000:
+        total_amount *= 0.9
+    if amount == 0:
+        break
+print("El total a pagar es: $" + str(total_amount))
+
+#Ejercicio 25
+
+number25 = int(input("Ingrese un número entero positivo: "))
+factorial = 1
+if number25 < 0:
+    print("El número ingresado debe ser positivo.")
+elif number25 == 0:
+    print("El factorial de 0 es 1.")
+else:
+    for i in range(1, number25 + 1):
+        factorial *= i
+    
+    print("El factorial de", number25, "es", factorial)
