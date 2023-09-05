@@ -11,8 +11,8 @@ if (dia_semana!="lunes") and (dia_semana!= "martes") and (dia_semana!= "miercole
     print("Se produjo un error reinicie el programa")
 else:
     if (dia<=31 and  dia>0 ) and (mes<=12 and mes>0):
-        nivel=(input("Ingrese su nivel:(1)Inicial, (2)Intermedio, (3)Avanzado, (4)Practica Hablada, (5)Ingles para viajeros: "))
-        if nivel!="5" and nivel!="4":        
+        nivel=dia_semana
+        if (nivel=="lunes") or (nivel=="martes") or (nivel=="miercoles"):        
             y_n=input("Hubo examenes? (si/no): ")
             y_n=y_n.lower()
             if y_n=="si":
@@ -22,13 +22,13 @@ else:
                 print(f"El porcentaje de aprobados es de: {porcentaje}%")
             else:
                 print("Termino el programa")
-        elif nivel=="4":
+        elif nivel=="jueves":
             asistencia=int(input("Porcentaje de asistencia: "))
             if asistencia>50:
                 print("Asistio la mayoria:")
             else:
                 print("No asistio la mayoria")
-        elif nivel=="5":
+        elif nivel=="viernes":
             if dia==1 and (mes==1 or mes==7):
                 print("Comienzo de nuevo ciclo: ")
                 alumnos=int(input("Cantidad de alumnos: "))
