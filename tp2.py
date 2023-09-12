@@ -140,12 +140,26 @@ if pizza=="a":
     print("Los ingredientes que ya vienen con la pizza son: mozzarella y tomate ")
     ingr=str(input("Puede elegir uno de estos ingredientes: Pimiento/Tofu "))
     ingr=ingr.lower()
-    print(f"Su pizza es vegetariana: los ingredientes que lleva son: Mozzarella, tomate y {ingr} ")
-else:
+    if ingr=="pimiento":
+        print(f"Su pizza es vegetariana: los ingredientes que lleva son: Mozzarella, tomate y {ingr} ")
+    elif ingr=="tofu":
+        print(f"Su pizza es vegetariana: los ingredientes que lleva son: Mozzarella, tomate y {ingr} ")
+    else:
+        print("El ingrediente ingresado esta mal escrito o no esta en el menu.")
+elif pizza=="b":
     print("Los ingredientes que ya vienen con la pizza son: mozzarella y tomate ")
     ingr=str(input("Puede elegir uno de estos ingredientes: Pepperonni/Jamon/Salmon "))
     ingr=ingr.lower()
-    print(f"Su pizza es no vegetariana: los ingredientes que lleva son: Mozzarella, tomate y {ingr} ")
+    if ingr=="pepperonni":
+        print(f"Su pizza es no vegetariana: los ingredientes que lleva son: Mozzarella, tomate y {ingr} ")
+    elif ingr=="jamon":
+        print(f"Su pizza es no vegetariana: los ingredientes que lleva son: Mozzarella, tomate y {ingr} ")
+    elif ingr=="salmon":
+        print(f"Su pizza es no vegetariana: los ingredientes que lleva son: Mozzarella, tomate y {ingr} ")
+    else:
+        print("El ingrediente ingresado esta mal escrito o no esta en el menu.")
+elif pizza!="a" and pizza!="b":
+    print("La opcion es incorrecta inicie el programa nuevamente.")
 
 #Ejercicio 12
 
