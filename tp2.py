@@ -146,6 +146,7 @@ if pizza=="a":
         print(f"Su pizza es vegetariana: los ingredientes que lleva son: Mozzarella, tomate y {ingr} ")
     else:
         print("El ingrediente ingresado esta mal escrito o no esta en el menu.")
+
 elif pizza=="b":
     print("Los ingredientes que ya vienen con la pizza son: mozzarella y tomate ")
     ingr=str(input("Puede elegir uno de estos ingredientes: Pepperonni/Jamon/Salmon "))
@@ -199,12 +200,14 @@ print("Le pediremos que ingrese los coeficientes de una ecuacion de primer grado
 
 a=int(input("Valor de 'a': "))
 b=int(input("Valor de 'b': "))
-
 print(f"{a}x+{b}=0")
-x= -b / a
 
-print(f"x=-{b}/{a}")
-print(f"El resultado de su ecuacion es {x}")
+if a==0:
+    print("Error, no se puede dividir por 0")
+else:
+    print(f"x=-{b}/{a}")
+    x= -b / a
+    print(f"El resultado de su ecuacion es {x}")
 
 #Ejercicio 15
 
@@ -243,15 +246,17 @@ elif operacion==3:
     resta=num001-num002
     print(f"El resultado de la resta es de {num001}-{num002}={resta}")
 elif operacion==4:
-    div=num001/num002
-    print(f"El resultado de la division es de {num001}/{num002}={div}")
+    if num002==0:
+        print("No se puede dividir por 0")
+    else:
+        div=num001/num002
+        print(f"El resultado de la division es de {num001}/{num002}={div}")
 else:
     print("La operacion ingresada no cerresponde a ninguna operacion de las pedidas")
 
 #Ejercicio 17
 
-dia=input("ingrese un dia de la semana: ")
-dia.lower
+dia=input("ingrese un dia de la semana: ").lower()
 if (dia=="lunes"):
     print("inicio de semana")
 elif (dia=="viernes"):
