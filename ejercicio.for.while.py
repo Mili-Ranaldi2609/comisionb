@@ -18,16 +18,18 @@ for i  in range(5):
 #Ejercicio 2
 
 num=1
-digito_p=0
-digito_imp=0
-while int(num>0 and num!=0):
-    
-    num=int(input("Ingrese un numero: "))
-    if int(num%2==0):
-        digito_p=1+digito_p
-    elif int(num%2!=0):
-        digito_imp=1+digito_imp
-        
+i=1
+while (num>0 and num!=0):
+    par=0
+    impar=0
+    var=0
+    num=input("Ingrese un numero, si es menor a 1 el programa se da por finalizado: ")
+    while var<len(num):#condicion de salida
+        i=int(num[var])
+        if(i%2==0):
+            par+=1
+        else:
+            impar+=1
+        var+=1
+    print("la cantidad de digitos pares son: ",par, "y la cantidad de digitos impares son: ", impar)
 
-print(f"digito pares: {digito_p}") 
-print(f"Digito impares:{digito_imp}")
