@@ -95,4 +95,52 @@ def count_lenght_words(phrase):
         dictionary[i] = len(i)
 
     return dictionary
+#Funcion ejercicio 13
+def module_vector(vector13):
+    sum_squares = sum(x**2 for x in vector13)
+    module13 = math.sqrt(sum_squares)
+    module13_1=round(module13,3)
+    return module13_1
+#Funcion ejercicio 14
+def prime_number_or_not(number):
+    if number<2:
+        return False
+    for i in range(2,int(number**0.5)+1):
+        if number % i ==0:
+            return False
+    return True
+#Funcion ejercicio 15
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n-1)
+def calculate_factorial(n):#en ningun momento la variable n es ejecutada, solamente se la llama para que se ejecute correctamente el programa y no marque errror.
+    read = 0
+    while True:
+        number = int(input("Ingresa un número (-1 para salir): "))
+        if number == -1:
+            break
+        else:
+            print("El factorial de", number, "es:", factorial(number))
+        read+=1
+    print("El total de numeros ingresados es: ",read)
+#Funcion ejercicio 16
+def count_occurrences(number, digit):
+    count = 0
+    while number > 0:
+        # Obtenemos el último dígito del número
+        ultimo_digito = number % 10
+        if ultimo_digito == digit:
+            count += 1
+        # Eliminamos el último dígito del número
+        number //= 10
+    return count
+#Funcion ejercicio 17
+
+def sum_digits(number):
+    sum = 0
+    for digit in str(number):
+        sum += int(digit)
+    return sum
 

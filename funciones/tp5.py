@@ -133,3 +133,50 @@ print("Contaremos la cantidad de letras que tiene cada palabra de la frase: '",p
 result12 = count_lenght_words(phrase3)
 print("La frase dividida por  palabra es: ")
 print(result12)
+
+#Ejercicio 13
+print("Vamos a calcular el modulo de un vector")
+#vector13 = [3, 4]
+vector13_2=[4,5]
+print("El vector es: ",vector13_2)
+module = module_vector(vector13_2)
+print(f"El módulo del vector {vector13_2} es: {module}")
+
+#Ejercicio 14
+print("Le pediremos que ingrese un numero entero para saber si es primo o no ")
+number14=int(input("Numero: "))
+if prime_number_or_not(number14):
+    print("El numero ingresado es primo")
+else:
+    print("El numero ingresado no es primo")
+
+#Ejercicio 15
+print("Vamos a calcular los factoriales de cada numero que ingreses: ")
+num=0
+calculate_factorial(num)#se ingresa una variable que no va a ser utilizada
+
+#Ejercicio 16
+print("Vamos a ver cuantas veces aparece un digito en el numero que ingreses")
+number16=int(input("Ingrese el numero: "))
+digit=int(input("Ingrese el digito: "))
+occurrences = count_occurrences(number16, digit)
+print(f"El dígito {digit} aparece {occurrences} veces en el número {number16}.")
+
+#Ejercicio 17
+greater_number = 0
+while True:
+    number17 = int(input("Ingresa un número primo (o un número no primo para finalizar): "))
+    
+    if prime_number_or_not(number17):
+        if number17 > greater_number:
+            greater_number= number17
+        addition=sum_digits(number17) 
+        print("La suma de los dígitos es:", addition)
+        
+        digit= int(input("Ingresa un dígito para ver si esta en el numero ingresado: "))
+        print("El dígito", digit, "aparece",count_occurrences(number17, digit), "veces.")
+        
+    else:
+        break
+factorial17=factorial(greater_number)
+print("El factorial del mayor número ingresado es:", factorial17)

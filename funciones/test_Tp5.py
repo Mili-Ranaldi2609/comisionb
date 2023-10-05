@@ -115,3 +115,55 @@ def test_funcion(funcion11,list11,res11):
 ])
 def test_count_lenght_words(phrase,result):
     assert count_lenght_words(phrase)==result
+
+#Ejercicio 13
+@pytest.mark.parametrize("vector, module",[
+    (([4,5]),6.403),
+    (([6,3]),6.708),
+    (([2,1]),2.236),
+])
+def test_module_vector(vector, module):
+    assert module_vector(vector)==module
+
+#Ejercicio 14
+@pytest.mark.parametrize("number14, res14",[
+    (1,False),
+    (2,True),
+    (-10,False),
+    (59,True),
+    (0,False),
+])
+def test_prime_number_or_not(number14,res14):
+    assert prime_number_or_not(number14)==res14
+
+#Ejercicio 15
+@pytest.mark.parametrize("factorial15,res15",[
+    (0, 1),
+    (1, 1),
+    (2, 2),
+    (3, 6),
+    (4, 24),
+    (5, 120),
+])
+def test_calculate_factorial(factorial15,res15):
+    assert factorial(factorial15)==res15
+
+#Ejercicio 16
+@pytest.mark.parametrize("number16,digit16,res16",[
+    (12342,2,2),
+    (1111,1,4),
+    (123,0,0),
+])
+def test_count_occurrences(number16,digit16,res16):
+    assert count_occurrences(number16,digit16)==res16
+
+#Ejercicio 17 
+# EL TEST DE LAS DEMAS FUNCIONES FUE REALIZADO CORRECTAMENTE EN ESTE CASO SOLO HARE EL 
+# TEST DE LA FUNCION QUE CALCULA LA SUMA DE LOS DIGITOS
+@pytest.mark.parametrize("number, sum",[
+    (12,3),
+    (73,10),
+    (44,8),
+])
+def test_sum_digits(number,sum):
+    assert sum_digits(number)==sum
