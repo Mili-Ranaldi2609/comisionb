@@ -81,7 +81,7 @@ while True:
     if name == 'x':
         break
     secondary_names.append(name)
-#a)
+#a
 unique_primary_names= list(set(primary_names))
 unique_secondary_names = list(set(secondary_names))
 print("Nombres de nivel primario:")
@@ -92,14 +92,14 @@ print("Nombres de nivel secundario:")
 for name in unique_secondary_names:
     print(name)
 
-#b)
+#b
 repeated_names = set(unique_primary_names).intersection(unique_secondary_names)
 if repeated_names:
     print("Nombres que se repiten entre nivel primario y secundario:", repeated_names)
 else:
     print("No hay nombres que se repitan entre nivel primario y secundario.")
 
-#c)
+#c
 no_repeated_primary = set(unique_primary_names).difference(unique_secondary_names)
 if no_repeated_primary:
     print("Nombres de nivel primario que no se repiten en nivel secundario:", no_repeated_primary)
