@@ -1,0 +1,38 @@
+class Persona:
+    def __init__(self,nombre, edad, dni):
+        self.nombre=nombre
+        self.edad=edad
+        self.dni=dni
+    def set_nombre(self, nombre):
+        if isinstance(nombre, str):
+            self.nombre = nombre
+        else:
+            print("Error: El nombre debe ser una cadena de texto.")
+    def get_nombre(self):
+        return self.nombre
+
+    def set_edad(self, edad):
+        if isinstance(edad, int) and edad >= 0:
+            self.edad = edad
+        else:
+            print("Error: La edad debe ser un número entero no negativo.")
+
+    def get_edad(self):
+        return self.edad
+
+    def set_dni(self, dni):
+        if isinstance(dni, str) and len(dni) == 9:
+            self.dni = dni
+        else:
+            print("Error: El DNI debe ser una cadena de texto de 9 caracteres.")
+
+    def get_dni(self):
+        return self.dni
+
+    def mostrar(self):
+        print("Nombre: ", self.nombre)
+        print("Edad: ", self.edad)
+        print("DNI: ", self.dni)
+
+    def esMayorDeEdad(self):
+        return self.edad >= 18
