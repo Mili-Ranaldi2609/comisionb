@@ -51,15 +51,15 @@ adn_mutante_o_no2=[
         "ATCGAT",
         "TTAAAG",
         "GGGCCC",
-        "ATGCTA"
+        "AAAATA"
 
 ]
 no_es=MutantDetector(adn_mutante_o_no2)
 if no_es.is_mutant():
     print("Caso B: El humano es mutante.")
 else:
-    print("Caso B: El humano no es mutante.")
-"""
+    print("Caso B: El humano no es mutante.")"""
+
 
 
 
